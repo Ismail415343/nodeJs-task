@@ -8,5 +8,10 @@
     "name": "haider",
     "age": 19,
     "city": "Lahore"
+  },
+  {
+    "name": "ismail",
+    "age": 20,
+    "city": "Karachi"
   }
 ]
