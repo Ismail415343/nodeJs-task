@@ -30,6 +30,12 @@ switch (command) {
       process.exit(1);
     }
 
+
+     if (isNaN(age)) {
+      console.log("❌ Age must be a valid number.");
+      process.exit(1);
+    }
+
     const students = loadStudents();
     
     if (students.some(s => s.name.toLowerCase() === name.toLowerCase())) {
@@ -57,7 +63,7 @@ switch (command) {
   case "search": {
     const name = args[1];
     if (!name) {
-      console.log("Usage: node index.js search <name>");
+      console.log("Usage: node studentManager.js search <name>");
       process.exit(1);
     }
 
@@ -69,10 +75,10 @@ switch (command) {
     break;
   }
 
-  case "remove": {
+ case "remove": {
     const name = args[1];
     if (!name) {
-      console.log("Usage: node index.js remove <name>");
+      console.log("Usage: node studentManager.js remove <name>");
       process.exit(1);
     }
 
@@ -96,6 +102,6 @@ Usage:
   node studentManager.js add "Name" Age "City"
   node studentManager.js list
   node studentManager.js search "Name"
-  node istudentManager.js remove "Name"
+  node studentManager.js remove "Name"
 `);
 }
