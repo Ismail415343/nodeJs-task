@@ -29,4 +29,5 @@ app.get("/student/:name", (req,res)=>{
 
 app.listen(PORT, ()=>{
 console.log(`serverr running successfully on the port ${PORT}`)
-});
+}); 
+ 
