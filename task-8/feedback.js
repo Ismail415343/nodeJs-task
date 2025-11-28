@@ -35,12 +35,13 @@ return res.json({
 app.get("/feedback", (req,res)=>{
 
 res.json({
-    feedback: feedbackList
+    status: "success",
+    feedback: feedbackList,
 
 })
 
 })
 
-app.listen(3000, () => {
+app.listen(() => {
   console.log("Feedback API running at http://localhost:3000");
 });
